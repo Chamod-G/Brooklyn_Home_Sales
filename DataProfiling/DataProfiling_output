@@ -1,0 +1,3705 @@
+<?xml version="1.0"?>
+<DataProfile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/sqlserver/2008/DataDebugger/">
+  <ProfileVersion>1.0</ProfileVersion>
+  <DataSources>
+    <DtsDataSource ID="{3309BDCA-9CB0-4675-82DF-15E24BD8C3AA}" Name="DataProfiling_output">
+      <DtsConnectionManagerID>DataProfiling_output</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}" Name="LAPTOP-520VJR13.Brooklyn_Home_Sales_Staging.sa">
+      <DtsConnectionManagerID>LAPTOP-520VJR13.Brooklyn_Home_Sales_Staging.sa</DtsConnectionManagerID>
+    </DtsDataSource>
+  </DataSources>
+  <DataProfileInput>
+    <ProfileMode>Exact</ProfileMode>
+    <Timeout>0</Timeout>
+    <Requests>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table Schema="dbo" Table="StgBuilding" />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table Schema="dbo" Table="StgBuilding" />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table Schema="dbo" Table="StgBuilding" />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table Schema="dbo" Table="StgBuilding" />
+        <Column IsWildCard="true" />
+        <Option>FrequentValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <CandidateKeyProfileRequest ID="KeyReq">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table Schema="dbo" Table="StgBuilding" />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq1">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table Schema="dbo" Table="StgCustomer" />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq1">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table Schema="dbo" Table="StgCustomer" />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq1">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table Schema="dbo" Table="StgCustomer" />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq1">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table Schema="dbo" Table="StgCustomer" />
+        <Column IsWildCard="true" />
+        <Option>FrequentValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <CandidateKeyProfileRequest ID="KeyReq1">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table Schema="dbo" Table="StgCustomer" />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq2">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table Schema="dbo" Table="StgOwner" />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq2">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table Schema="dbo" Table="StgOwner" />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq2">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table Schema="dbo" Table="StgOwner" />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq2">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table Schema="dbo" Table="StgOwner" />
+        <Column IsWildCard="true" />
+        <Option>FrequentValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <CandidateKeyProfileRequest ID="KeyReq2">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table Schema="dbo" Table="StgOwner" />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq3">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table Schema="dbo" Table="StgSales" />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq3">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table Schema="dbo" Table="StgSales" />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq3">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table Schema="dbo" Table="StgSales" />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq3">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table Schema="dbo" Table="StgSales" />
+        <Column IsWildCard="true" />
+        <Option>FrequentValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <CandidateKeyProfileRequest ID="KeyReq3">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table Schema="dbo" Table="StgSales" />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+    </Requests>
+  </DataProfileInput>
+  <DataProfileOutput>
+    <Profiles>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq2" IsExact="true">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgOwner" RowCount="79992" />
+        <Column Name="Owner_ID" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq2" IsExact="true">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgOwner" RowCount="79992" />
+        <Column Name="OwnerAddress" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq2" IsExact="true">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgOwner" RowCount="79992" />
+        <Column Name="OwnerType" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq2" IsExact="true">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgOwner" RowCount="79992" />
+        <Column Name="Owner_ID" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>7</MinLength>
+        <MaxLength>7</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>7</Length>
+            <Count>79992</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq2" IsExact="true">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgOwner" RowCount="79992" />
+        <Column Name="OwnerAddress" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>2</MinLength>
+        <MaxLength>21</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>15</Length>
+            <Count>5288</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>9</Length>
+            <Count>516</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>3</Length>
+            <Count>4</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>12</Length>
+            <Count>2672</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>6</Length>
+            <Count>20</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>21</Length>
+            <Count>18580</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>7</Length>
+            <Count>144</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>18</Length>
+            <Count>4012</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>10</Length>
+            <Count>1028</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>19</Length>
+            <Count>3796</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>13</Length>
+            <Count>4116</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>16</Length>
+            <Count>4732</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>2</Length>
+            <Count>18212</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>17</Length>
+            <Count>4264</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>11</Length>
+            <Count>1804</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>20</Length>
+            <Count>5856</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>14</Length>
+            <Count>4652</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>8</Length>
+            <Count>296</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq2" IsExact="true">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgOwner" RowCount="79992" />
+        <Column Name="OwnerType" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>1</MinLength>
+        <MaxLength>2</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>1</Length>
+            <Count>13956</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>2</Length>
+            <Count>66036</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq2">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgOwner" RowCount="79992" />
+        <Column Name="Owner_ID" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>19998</NumberOfDistinctValues>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq2">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgOwner" RowCount="79992" />
+        <Column Name="OwnerAddress" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>12860</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>USM ASSET TRUST - SER</Value>
+            <Count>92</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>SILVERSHORE PROPERTIE</Value>
+            <Count>104</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>PENRITH URF LLC</Value>
+            <Count>92</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>NA</Value>
+            <Count>18212</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq2">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgOwner" RowCount="79992" />
+        <Column Name="OwnerType" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>6</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>X</Value>
+            <Count>440</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>P</Value>
+            <Count>13392</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>NA</Value>
+            <Count>66036</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq3" IsExact="true">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgSales" RowCount="19998" />
+        <Column Name="Sales ID" SqlDbType="Decimal" MaxLength="0" Precision="18" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq3" IsExact="true">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgSales" RowCount="19998" />
+        <Column Name="Customer ID" SqlDbType="NVarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq3" IsExact="true">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgSales" RowCount="19998" />
+        <Column Name="Building ID" SqlDbType="Decimal" MaxLength="0" Precision="18" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq3" IsExact="true">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgSales" RowCount="19998" />
+        <Column Name="sale_price" SqlDbType="Decimal" MaxLength="0" Precision="18" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq3" IsExact="true">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgSales" RowCount="19998" />
+        <Column Name="sale_date" SqlDbType="DateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq3" IsExact="true">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgSales" RowCount="19998" />
+        <Column Name="total_units" SqlDbType="Decimal" MaxLength="0" Precision="18" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq3" IsExact="true">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgSales" RowCount="19998" />
+        <Column Name="land_sqft" SqlDbType="Decimal" MaxLength="0" Precision="18" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq3" IsExact="true">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgSales" RowCount="19998" />
+        <Column Name="gross_sqft" SqlDbType="Decimal" MaxLength="0" Precision="18" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq3">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgSales" RowCount="19998" />
+        <Column Name="Sales ID" SqlDbType="Decimal" MaxLength="0" Precision="18" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>400000</MinValue>
+        <MaxValue>799971</MaxValue>
+        <Mean>601156.997549755</Mean>
+        <StdDev>115095.270994608</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq3">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgSales" RowCount="19998" />
+        <Column Name="Building ID" SqlDbType="Decimal" MaxLength="0" Precision="18" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>1</MinValue>
+        <MaxValue>19998</MaxValue>
+        <Mean>9999.5</Mean>
+        <StdDev>5772.92533440947</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq3">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgSales" RowCount="19998" />
+        <Column Name="sale_price" SqlDbType="Decimal" MaxLength="0" Precision="18" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>1312500</MinValue>
+        <MaxValue>499401179</MaxValue>
+        <Mean>3730870.69646965</Mean>
+        <StdDev>9089546.78370201</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq3">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgSales" RowCount="19998" />
+        <Column Name="sale_date" SqlDbType="DateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>2003-01-03T00:00:00.0000000</MinValue>
+        <MaxValue>2017-12-29T00:00:00.0000000</MaxValue>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq3">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgSales" RowCount="19998" />
+        <Column Name="total_units" SqlDbType="Decimal" MaxLength="0" Precision="18" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>0</MinValue>
+        <MaxValue>632</MaxValue>
+        <Mean>6.32973297329733</Mean>
+        <StdDev>18.805152230539</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq3">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgSales" RowCount="19998" />
+        <Column Name="land_sqft" SqlDbType="Decimal" MaxLength="0" Precision="18" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>0</MinValue>
+        <MaxValue>2574982</MaxValue>
+        <Mean>5364.32933293329</Mean>
+        <StdDev>25339.3611146635</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq3">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgSales" RowCount="19998" />
+        <Column Name="gross_sqft" SqlDbType="Decimal" MaxLength="0" Precision="18" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>0</MinValue>
+        <MaxValue>2548000</MaxValue>
+        <Mean>8972.13251325132</Mean>
+        <StdDev>32616.0686164572</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq3" IsExact="true">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgSales" RowCount="19998" />
+        <Column Name="Customer ID" SqlDbType="NVarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>4</MinLength>
+        <MaxLength>7</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>6</Length>
+            <Count>2564</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>7</Length>
+            <Count>17165</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>4</Length>
+            <Count>23</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>5</Length>
+            <Count>246</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq3">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgSales" RowCount="19998" />
+        <KeyColumns>
+          <Column Name="Customer ID" SqlDbType="NVarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>true</IsExactKey>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq3">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgSales" RowCount="19998" />
+        <Column Name="Customer ID" SqlDbType="NVarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>19998</NumberOfDistinctValues>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq3">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgSales" RowCount="19998" />
+        <Column Name="sale_date" SqlDbType="DateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>2863</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>2017-02-16T00:00:00.0000000</Value>
+            <Count>24</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2017-07-12T00:00:00.0000000</Value>
+            <Count>20</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2017-09-07T00:00:00.0000000</Value>
+            <Count>24</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2016-05-17T00:00:00.0000000</Value>
+            <Count>24</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2007-06-28T00:00:00.0000000</Value>
+            <Count>23</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2015-03-26T00:00:00.0000000</Value>
+            <Count>20</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2016-06-29T00:00:00.0000000</Value>
+            <Count>24</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2015-05-28T00:00:00.0000000</Value>
+            <Count>21</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2015-07-30T00:00:00.0000000</Value>
+            <Count>21</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2015-12-23T00:00:00.0000000</Value>
+            <Count>24</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2017-03-31T00:00:00.0000000</Value>
+            <Count>24</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2017-06-22T00:00:00.0000000</Value>
+            <Count>22</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2014-04-08T00:00:00.0000000</Value>
+            <Count>21</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2014-06-30T00:00:00.0000000</Value>
+            <Count>20</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2016-11-22T00:00:00.0000000</Value>
+            <Count>23</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2016-09-29T00:00:00.0000000</Value>
+            <Count>22</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2008-06-26T00:00:00.0000000</Value>
+            <Count>41</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2015-04-30T00:00:00.0000000</Value>
+            <Count>28</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2015-02-03T00:00:00.0000000</Value>
+            <Count>20</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2016-07-28T00:00:00.0000000</Value>
+            <Count>25</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2015-07-16T00:00:00.0000000</Value>
+            <Count>22</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2017-04-06T00:00:00.0000000</Value>
+            <Count>22</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2015-10-30T00:00:00.0000000</Value>
+            <Count>20</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2017-08-30T00:00:00.0000000</Value>
+            <Count>20</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2017-05-16T00:00:00.0000000</Value>
+            <Count>21</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2003-05-29T00:00:00.0000000</Value>
+            <Count>24</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2015-12-15T00:00:00.0000000</Value>
+            <Count>20</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2012-12-28T00:00:00.0000000</Value>
+            <Count>20</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2017-06-08T00:00:00.0000000</Value>
+            <Count>25</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2017-05-25T00:00:00.0000000</Value>
+            <Count>23</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2016-10-28T00:00:00.0000000</Value>
+            <Count>20</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2016-09-15T00:00:00.0000000</Value>
+            <Count>22</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2012-12-31T00:00:00.0000000</Value>
+            <Count>22</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2017-12-14T00:00:00.0000000</Value>
+            <Count>20</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2015-11-05T00:00:00.0000000</Value>
+            <Count>24</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2017-05-22T00:00:00.0000000</Value>
+            <Count>20</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2015-06-18T00:00:00.0000000</Value>
+            <Count>21</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2017-09-28T00:00:00.0000000</Value>
+            <Count>24</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2017-07-27T00:00:00.0000000</Value>
+            <Count>21</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2017-02-28T00:00:00.0000000</Value>
+            <Count>25</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2016-07-26T00:00:00.0000000</Value>
+            <Count>21</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2015-03-13T00:00:00.0000000</Value>
+            <Count>22</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2013-08-29T00:00:00.0000000</Value>
+            <Count>25</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2016-09-27T00:00:00.0000000</Value>
+            <Count>22</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2015-03-10T00:00:00.0000000</Value>
+            <Count>22</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2017-06-20T00:00:00.0000000</Value>
+            <Count>20</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2017-07-13T00:00:00.0000000</Value>
+            <Count>22</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2015-01-29T00:00:00.0000000</Value>
+            <Count>24</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2016-12-19T00:00:00.0000000</Value>
+            <Count>23</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2014-11-24T00:00:00.0000000</Value>
+            <Count>20</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2016-01-19T00:00:00.0000000</Value>
+            <Count>20</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2016-06-30T00:00:00.0000000</Value>
+            <Count>26</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2012-12-20T00:00:00.0000000</Value>
+            <Count>31</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2016-06-02T00:00:00.0000000</Value>
+            <Count>20</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2015-05-21T00:00:00.0000000</Value>
+            <Count>26</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2017-08-31T00:00:00.0000000</Value>
+            <Count>23</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2015-06-30T00:00:00.0000000</Value>
+            <Count>41</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2015-09-01T00:00:00.0000000</Value>
+            <Count>35</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2015-03-16T00:00:00.0000000</Value>
+            <Count>20</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2015-01-15T00:00:00.0000000</Value>
+            <Count>23</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2017-06-26T00:00:00.0000000</Value>
+            <Count>21</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2017-06-29T00:00:00.0000000</Value>
+            <Count>34</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2017-07-31T00:00:00.0000000</Value>
+            <Count>20</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2015-07-29T00:00:00.0000000</Value>
+            <Count>29</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2016-05-19T00:00:00.0000000</Value>
+            <Count>25</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2016-07-21T00:00:00.0000000</Value>
+            <Count>23</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2016-06-28T00:00:00.0000000</Value>
+            <Count>22</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2017-09-26T00:00:00.0000000</Value>
+            <Count>20</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2016-08-30T00:00:00.0000000</Value>
+            <Count>25</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2017-03-24T00:00:00.0000000</Value>
+            <Count>20</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2015-09-10T00:00:00.0000000</Value>
+            <Count>22</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2016-10-06T00:00:00.0000000</Value>
+            <Count>30</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2016-02-29T00:00:00.0000000</Value>
+            <Count>20</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2014-05-29T00:00:00.0000000</Value>
+            <Count>23</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2017-04-05T00:00:00.0000000</Value>
+            <Count>21</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2015-08-10T00:00:00.0000000</Value>
+            <Count>22</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2017-06-27T00:00:00.0000000</Value>
+            <Count>20</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2017-03-30T00:00:00.0000000</Value>
+            <Count>29</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2017-02-21T00:00:00.0000000</Value>
+            <Count>22</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2017-02-15T00:00:00.0000000</Value>
+            <Count>21</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2017-08-03T00:00:00.0000000</Value>
+            <Count>22</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2015-07-15T00:00:00.0000000</Value>
+            <Count>23</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2017-06-13T00:00:00.0000000</Value>
+            <Count>20</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2017-08-29T00:00:00.0000000</Value>
+            <Count>21</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2017-06-30T00:00:00.0000000</Value>
+            <Count>31</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2015-04-15T00:00:00.0000000</Value>
+            <Count>21</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2016-06-23T00:00:00.0000000</Value>
+            <Count>20</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2017-07-20T00:00:00.0000000</Value>
+            <Count>30</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2012-12-27T00:00:00.0000000</Value>
+            <Count>34</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2017-05-01T00:00:00.0000000</Value>
+            <Count>23</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2017-03-16T00:00:00.0000000</Value>
+            <Count>24</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2017-05-18T00:00:00.0000000</Value>
+            <Count>36</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2015-07-01T00:00:00.0000000</Value>
+            <Count>20</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2015-04-29T00:00:00.0000000</Value>
+            <Count>22</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2016-10-27T00:00:00.0000000</Value>
+            <Count>23</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2017-01-12T00:00:00.0000000</Value>
+            <Count>21</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2017-01-24T00:00:00.0000000</Value>
+            <Count>21</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgBuilding" RowCount="19998" />
+        <Column Name="Building ID" SqlDbType="Decimal" MaxLength="0" Precision="18" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgBuilding" RowCount="19998" />
+        <Column Name="Owner ID" SqlDbType="NVarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgBuilding" RowCount="19998" />
+        <Column Name="zip_code" SqlDbType="Decimal" MaxLength="0" Precision="18" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgBuilding" RowCount="19998" />
+        <Column Name="neighborhood" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgBuilding" RowCount="19998" />
+        <Column Name="block" SqlDbType="Decimal" MaxLength="0" Precision="18" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgBuilding" RowCount="19998" />
+        <Column Name="address" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgBuilding" RowCount="19998" />
+        <Column Name="building_class_category" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>1</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgBuilding" RowCount="19998" />
+        <Column Name="tax_class" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>340</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgBuilding" RowCount="19998" />
+        <Column Name="building_class" SqlDbType="NVarChar" MaxLength="2" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>340</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgBuilding" RowCount="19998" />
+        <Column Name="year_built" SqlDbType="NVarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgBuilding" RowCount="19998" />
+        <Column Name="LandUse" SqlDbType="NVarChar" MaxLength="100" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgBuilding" RowCount="19998" />
+        <Column Name="Building ID" SqlDbType="Decimal" MaxLength="0" Precision="18" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>1</MinValue>
+        <MaxValue>19998</MaxValue>
+        <Mean>9999.5</Mean>
+        <StdDev>5772.92533440947</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgBuilding" RowCount="19998" />
+        <Column Name="zip_code" SqlDbType="Decimal" MaxLength="0" Precision="18" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>0</MinValue>
+        <MaxValue>11249</MaxValue>
+        <Mean>11191.4520952095</Mean>
+        <StdDev>554.795204875012</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgBuilding" RowCount="19998" />
+        <Column Name="block" SqlDbType="Decimal" MaxLength="0" Precision="18" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>1</MinValue>
+        <MaxValue>8885</MaxValue>
+        <Mean>2721.18591859186</Mean>
+        <StdDev>2407.398801349</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgBuilding" RowCount="19998" />
+        <Column Name="Owner ID" SqlDbType="NVarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>5</MinLength>
+        <MaxLength>7</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>6</Length>
+            <Count>4574</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>7</Length>
+            <Count>15010</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>5</Length>
+            <Count>414</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgBuilding" RowCount="19998" />
+        <Column Name="neighborhood" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>7</MinLength>
+        <MaxLength>24</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>15</Length>
+            <Count>1066</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>9</Length>
+            <Count>696</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>12</Length>
+            <Count>1370</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>21</Length>
+            <Count>643</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>7</Length>
+            <Count>801</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>24</Length>
+            <Count>233</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>18</Length>
+            <Count>2745</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>10</Length>
+            <Count>2929</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>19</Length>
+            <Count>781</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>13</Length>
+            <Count>1456</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>16</Length>
+            <Count>2664</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>17</Length>
+            <Count>676</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>11</Length>
+            <Count>2379</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>20</Length>
+            <Count>454</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>14</Length>
+            <Count>439</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>8</Length>
+            <Count>666</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgBuilding" RowCount="19998" />
+        <Column Name="address" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>1</MinLength>
+        <MaxLength>31</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>23</Length>
+            <Count>484</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>29</Length>
+            <Count>3</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>15</Length>
+            <Count>1741</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>9</Length>
+            <Count>15</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>26</Length>
+            <Count>31</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>12</Length>
+            <Count>812</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>21</Length>
+            <Count>1284</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>27</Length>
+            <Count>8</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>7</Length>
+            <Count>4</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>1</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>24</Length>
+            <Count>209</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>18</Length>
+            <Count>3275</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>30</Length>
+            <Count>2</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>10</Length>
+            <Count>69</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>19</Length>
+            <Count>1945</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>25</Length>
+            <Count>55</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>13</Length>
+            <Count>797</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>22</Length>
+            <Count>791</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>16</Length>
+            <Count>2690</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>17</Length>
+            <Count>2935</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>31</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>11</Length>
+            <Count>166</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>20</Length>
+            <Count>1618</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>28</Length>
+            <Count>4</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>14</Length>
+            <Count>1049</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>8</Length>
+            <Count>9</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgBuilding" RowCount="19998" />
+        <Column Name="building_class_category" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>1</MinLength>
+        <MaxLength>43</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>23</Length>
+            <Count>760</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>29</Length>
+            <Count>71</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>15</Length>
+            <Count>4</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>3</Length>
+            <Count>40</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>32</Length>
+            <Count>1899</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>26</Length>
+            <Count>363</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>12</Length>
+            <Count>33</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>35</Length>
+            <Count>2</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>6</Length>
+            <Count>5</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>43</Length>
+            <Count>9</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>21</Length>
+            <Count>2072</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>27</Length>
+            <Count>208</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>7</Length>
+            <Count>4</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>1</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>24</Length>
+            <Count>120</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>30</Length>
+            <Count>519</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>18</Length>
+            <Count>137</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>41</Length>
+            <Count>33</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>4</Length>
+            <Count>46</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>19</Length>
+            <Count>6189</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>25</Length>
+            <Count>135</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>36</Length>
+            <Count>8</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>13</Length>
+            <Count>474</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>42</Length>
+            <Count>9</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>5</Length>
+            <Count>20</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>22</Length>
+            <Count>847</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>33</Length>
+            <Count>801</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>16</Length>
+            <Count>33</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>17</Length>
+            <Count>27</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>31</Length>
+            <Count>3741</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>34</Length>
+            <Count>545</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>40</Length>
+            <Count>3</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>11</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>20</Length>
+            <Count>328</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>28</Length>
+            <Count>19</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>14</Length>
+            <Count>490</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>37</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgBuilding" RowCount="19998" />
+        <Column Name="tax_class" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>1</MinLength>
+        <MaxLength>31</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>29</Length>
+            <Count>200</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>15</Length>
+            <Count>3</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>1</Length>
+            <Count>15226</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>30</Length>
+            <Count>58</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>19</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>2</Length>
+            <Count>3823</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>31</Length>
+            <Count>288</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>11</Length>
+            <Count>2</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>28</Length>
+            <Count>54</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>14</Length>
+            <Count>3</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgBuilding" RowCount="19998" />
+        <Column Name="building_class" SqlDbType="NVarChar" MaxLength="2" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>1</MinLength>
+        <MaxLength>2</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>1</Length>
+            <Count>406</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>2</Length>
+            <Count>19252</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgBuilding" RowCount="19998" />
+        <Column Name="year_built" SqlDbType="NVarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>1</MinLength>
+        <MaxLength>4</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>1</Length>
+            <Count>1917</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>4</Length>
+            <Count>17472</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>2</Length>
+            <Count>609</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgBuilding" RowCount="19998" />
+        <Column Name="LandUse" SqlDbType="NVarChar" MaxLength="100" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>1</MinLength>
+        <MaxLength>7</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>6</Length>
+            <Count>600</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>7</Length>
+            <Count>8</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>1</Length>
+            <Count>14205</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>4</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>2</Length>
+            <Count>5184</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgBuilding" RowCount="19998" />
+        <KeyColumns>
+          <Column Name="Owner ID" SqlDbType="NVarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>true</IsExactKey>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgBuilding" RowCount="19998" />
+        <Column Name="Owner ID" SqlDbType="NVarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>19998</NumberOfDistinctValues>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgBuilding" RowCount="19998" />
+        <Column Name="neighborhood" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>62</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>CANARSIE</Value>
+            <Count>68</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>CYPRESS HILLS</Value>
+            <Count>56</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>CARROLL GARDENS</Value>
+            <Count>614</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>SHEEPSHEAD BAY</Value>
+            <Count>165</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BROOKLYN HEIGHTS</Value>
+            <Count>950</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>FORT GREENE</Value>
+            <Count>456</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BROWNSVILLE</Value>
+            <Count>98</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>WILLIAMSBURG-SOUTH</Value>
+            <Count>488</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BENSONHURST</Value>
+            <Count>337</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BATH BEACH</Value>
+            <Count>166</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>FLATBUSH-NORTH</Value>
+            <Count>139</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>CROWN HEIGHTS</Value>
+            <Count>810</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>RED HOOK</Value>
+            <Count>145</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>MILL BASIN</Value>
+            <Count>90</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>WILLIAMSBURG-EAST</Value>
+            <Count>676</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>OCEAN HILL</Value>
+            <Count>140</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>MARINE PARK</Value>
+            <Count>28</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>CLINTON HILL</Value>
+            <Count>516</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BUSH TERMINAL</Value>
+            <Count>80</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>PROSPECT HEIGHTS</Value>
+            <Count>491</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>MANHATTAN BEACH</Value>
+            <Count>178</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>OCEAN PARKWAY-NORTH</Value>
+            <Count>442</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>COBBLE HILL-WEST</Value>
+            <Count>138</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>DOWNTOWN-FULTON MALL</Value>
+            <Count>384</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>COBBLE HILL</Value>
+            <Count>392</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>OCEAN PARKWAY-SOUTH</Value>
+            <Count>339</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>GRAVESEND</Value>
+            <Count>169</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BERGEN BEACH</Value>
+            <Count>22</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>FLATLANDS</Value>
+            <Count>20</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BOERUM HILL</Value>
+            <Count>531</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>MIDWOOD</Value>
+            <Count>304</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BAY RIDGE</Value>
+            <Count>450</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>EAST NEW YORK</Value>
+            <Count>206</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>NAVY YARD</Value>
+            <Count>57</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>DYKER HEIGHTS</Value>
+            <Count>124</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>PARK SLOPE</Value>
+            <Count>1748</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>WILLIAMSBURG-CENTRAL</Value>
+            <Count>70</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>KENSINGTON</Value>
+            <Count>80</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BEDFORD STUYVESANT</Value>
+            <Count>1212</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>WILLIAMSBURG-NORTH</Value>
+            <Count>945</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>FLATBUSH-CENTRAL</Value>
+            <Count>645</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>DOWNTOWN-METROTECH</Value>
+            <Count>100</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>PARK SLOPE SOUTH</Value>
+            <Count>428</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BRIGHTON BEACH</Value>
+            <Count>123</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>MADISON</Value>
+            <Count>140</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>CONEY ISLAND</Value>
+            <Count>66</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>DOWNTOWN-FULTON FERRY</Value>
+            <Count>643</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BUSHWICK</Value>
+            <Count>453</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>WYCKOFF HEIGHTS</Value>
+            <Count>95</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>GREENPOINT</Value>
+            <Count>705</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>SUNSET PARK</Value>
+            <Count>535</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>FLATBUSH-EAST</Value>
+            <Count>180</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>WINDSOR TERRACE</Value>
+            <Count>176</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BOROUGH PARK</Value>
+            <Count>759</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>FLATBUSH-LEFFERTS GARDEN</Value>
+            <Count>233</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>GOWANUS</Value>
+            <Count>348</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgBuilding" RowCount="19998" />
+        <Column Name="address" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>15420</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>22 NORTH 6TH   STREET</Value>
+            <Count>48</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>291 UNION STREET</Value>
+            <Count>37</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>550 VANDERBILT AVENUE</Value>
+            <Count>22</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1 NORTH PIER</Value>
+            <Count>26</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>360 FURMAN STREET</Value>
+            <Count>55</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>184 KENT AVENUE</Value>
+            <Count>28</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1 MAIN STREET</Value>
+            <Count>69</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>365 BRIDGE STREET</Value>
+            <Count>28</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>20 HENRY STREET</Value>
+            <Count>30</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>388 BRIDGE STREET</Value>
+            <Count>49</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>70 WASHINGTON STREET</Value>
+            <Count>102</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>337 CARROLL STREET</Value>
+            <Count>32</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2 NORTHSIDE PIERS</Value>
+            <Count>71</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>85 NORTH 3RD   STREET</Value>
+            <Count>24</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>22 NORTH 6TH STREET</Value>
+            <Count>21</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>700 PACIFIC STREET</Value>
+            <Count>21</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>110 LIVINGSTON STREET</Value>
+            <Count>27</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>30 MAIN STREET</Value>
+            <Count>58</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>440 KENT AVENUE</Value>
+            <Count>32</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>51 JAY STREET</Value>
+            <Count>52</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1 JOHN STREET</Value>
+            <Count>39</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>34 NORTH 7TH   STREET</Value>
+            <Count>42</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>429 KENT AVENUE</Value>
+            <Count>87</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>100 JAY STREET</Value>
+            <Count>84</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>205 WATER STREET</Value>
+            <Count>26</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>251 1 STREET</Value>
+            <Count>38</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1 HANSON PLACE</Value>
+            <Count>53</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>400 AVENUE U</Value>
+            <Count>24</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>9 COLLEGE PLACE</Value>
+            <Count>38</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1 GRAND ARMY PLAZA</Value>
+            <Count>67</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60 BROADWAY</Value>
+            <Count>34</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>465 PACIFIC STREET</Value>
+            <Count>27</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>90 FURMAN STREET</Value>
+            <Count>72</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>265 STATE STREET</Value>
+            <Count>106</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgBuilding" RowCount="19998" />
+        <Column Name="building_class_category" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>519</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>13 CONDOS - ELEVATOR APARTMENTS</Value>
+            <Count>755</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>07  RENTALS - WALKUP APARTMENTS</Value>
+            <Count>2972</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>14 RENTALS - 4-10 UNIT</Value>
+            <Count>122</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>15  CONDOS - 2-10 UNIT RESIDENTIAL</Value>
+            <Count>439</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>22  STORE BUILDINGS</Value>
+            <Count>704</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>29 COMMERCIAL GARAGES</Value>
+            <Count>63</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>46  CONDO STORE BUILDINGS</Value>
+            <Count>22</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>21  OFFICE BUILDINGS</Value>
+            <Count>277</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>07 RENTALS - WALKUP APARTMENTS</Value>
+            <Count>408</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>26  OTHER HOTELS</Value>
+            <Count>28</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>08  RENTALS - ELEVATOR APARTMENTS</Value>
+            <Count>644</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>04  TAX CLASS 1 CONDOS</Value>
+            <Count>159</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>02 TWO FAMILY HOMES</Value>
+            <Count>3474</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>37  RELIGIOUS FACILITIES</Value>
+            <Count>85</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>12 CONDOS - WALKUP APARTMENTS</Value>
+            <Count>29</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>12  CONDOS - WALKUP APARTMENTS</Value>
+            <Count>110</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>23  LOFT BUILDINGS</Value>
+            <Count>23</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>15 CONDOS - 2-10 UNIT RESIDENTIAL</Value>
+            <Count>149</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>14  RENTALS - 4-10 UNIT</Value>
+            <Count>601</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>08 RENTALS - ELEVATOR APARTMENTS</Value>
+            <Count>43</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>30  WAREHOUSES</Value>
+            <Count>490</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>21 OFFICE BUILDINGS</Value>
+            <Count>36</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>31  COMMERCIAL VACANT LAND</Value>
+            <Count>192</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>27  FACTORIES</Value>
+            <Count>423</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>09  COOPS - WALKUP APARTMENTS</Value>
+            <Count>31</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>05 TAX CLASS 1 VACANT LAND</Value>
+            <Count>21</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>35  INDOOR PUBLIC AND CULTURAL FACILITIES</Value>
+            <Count>32</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>27 FACTORIES</Value>
+            <Count>27</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>41  TAX CLASS 4 - OTHER</Value>
+            <Count>75</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>01 ONE FAMILY HOMES</Value>
+            <Count>1968</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>32  HOSPITAL AND HEALTH FACILITIES</Value>
+            <Count>105</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>29  COMMERCIAL GARAGES</Value>
+            <Count>499</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>04 TAX CLASS 1 CONDOS</Value>
+            <Count>64</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>28  COMMERCIAL CONDOS</Value>
+            <Count>90</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>30 WAREHOUSES</Value>
+            <Count>51</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>13  CONDOS - ELEVATOR APARTMENTS</Value>
+            <Count>1856</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>33  EDUCATIONAL FACILITIES</Value>
+            <Count>67</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>22 STORE BUILDINGS</Value>
+            <Count>109</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>03 THREE FAMILY HOMES</Value>
+            <Count>1749</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>05  TAX CLASS 1 VACANT LAND</Value>
+            <Count>179</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>43  CONDO OFFICE BUILDINGS</Value>
+            <Count>27</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgBuilding" RowCount="19998" />
+        <Column Name="tax_class" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>19</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>2</Value>
+            <Count>4702</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>09 COOPS - WALKUP APARTMENTS</Value>
+            <Count>54</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>4</Value>
+            <Count>3373</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2A</Value>
+            <Count>1769</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1A</Value>
+            <Count>60</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2C</Value>
+            <Count>590</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>10  COOPS - ELEVATOR APARTMENTS</Value>
+            <Count>287</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1C</Value>
+            <Count>151</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1B</Value>
+            <Count>224</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2B</Value>
+            <Count>1029</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>10 COOPS - ELEVATOR APARTMENTS</Value>
+            <Count>58</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>09  COOPS - WALKUP APARTMENTS</Value>
+            <Count>200</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1</Value>
+            <Count>7149</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgBuilding" RowCount="19998" />
+        <Column Name="building_class" SqlDbType="NVarChar" MaxLength="2" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>158</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>V1</Value>
+            <Count>239</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>G2</Value>
+            <Count>68</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>G9</Value>
+            <Count>89</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>G4</Value>
+            <Count>29</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>B3</Value>
+            <Count>987</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>A3</Value>
+            <Count>165</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>D3</Value>
+            <Count>37</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2</Value>
+            <Count>405</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>R6</Value>
+            <Count>150</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>G7</Value>
+            <Count>153</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C5</Value>
+            <Count>57</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>S1</Value>
+            <Count>91</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>O7</Value>
+            <Count>64</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>I5</Value>
+            <Count>37</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>M1</Value>
+            <Count>46</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>O8</Value>
+            <Count>25</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>O6</Value>
+            <Count>59</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>O2</Value>
+            <Count>30</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>R1</Value>
+            <Count>556</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>D6</Value>
+            <Count>24</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>A2</Value>
+            <Count>27</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>A9</Value>
+            <Count>258</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>A4</Value>
+            <Count>411</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>E1</Value>
+            <Count>130</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>G5</Value>
+            <Count>20</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>S2</Value>
+            <Count>413</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C1</Value>
+            <Count>1597</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>R2</Value>
+            <Count>135</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>K1</Value>
+            <Count>311</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>S3</Value>
+            <Count>156</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>F4</Value>
+            <Count>79</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>R4</Value>
+            <Count>2537</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>R3</Value>
+            <Count>60</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>D7</Value>
+            <Count>101</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>B2</Value>
+            <Count>410</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>W2</Value>
+            <Count>26</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>E3</Value>
+            <Count>78</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>E7</Value>
+            <Count>30</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2C</Value>
+            <Count>203</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>K2</Value>
+            <Count>156</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>K4</Value>
+            <Count>180</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>K9</Value>
+            <Count>113</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>RB</Value>
+            <Count>40</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>S9</Value>
+            <Count>265</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>S4</Value>
+            <Count>135</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Z9</Value>
+            <Count>70</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>M9</Value>
+            <Count>25</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C3</Value>
+            <Count>670</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>F5</Value>
+            <Count>47</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C7</Value>
+            <Count>364</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C6</Value>
+            <Count>28</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C2</Value>
+            <Count>556</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>I6</Value>
+            <Count>20</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>V0</Value>
+            <Count>211</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>O5</Value>
+            <Count>35</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>A5</Value>
+            <Count>261</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>D5</Value>
+            <Count>27</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>S5</Value>
+            <Count>169</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>B1</Value>
+            <Count>871</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>A1</Value>
+            <Count>773</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>O9</Value>
+            <Count>82</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>R5</Value>
+            <Count>71</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>F9</Value>
+            <Count>178</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>G1</Value>
+            <Count>49</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>G6</Value>
+            <Count>34</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C4</Value>
+            <Count>59</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>K5</Value>
+            <Count>26</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>E9</Value>
+            <Count>272</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>F1</Value>
+            <Count>40</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>D1</Value>
+            <Count>500</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>RK</Value>
+            <Count>32</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>B9</Value>
+            <Count>738</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>W9</Value>
+            <Count>34</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C0</Value>
+            <Count>1719</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>D9</Value>
+            <Count>49</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgBuilding" RowCount="19998" />
+        <Column Name="year_built" SqlDbType="NVarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>170</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>1930</Value>
+            <Count>1186</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1963</Value>
+            <Count>36</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1972</Value>
+            <Count>27</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1950</Value>
+            <Count>154</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1938</Value>
+            <Count>37</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2008</Value>
+            <Count>278</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1961</Value>
+            <Count>26</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1912</Value>
+            <Count>45</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2009</Value>
+            <Count>281</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1939</Value>
+            <Count>22</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1934</Value>
+            <Count>22</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1935</Value>
+            <Count>119</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2006</Value>
+            <Count>147</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1955</Value>
+            <Count>56</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1940</Value>
+            <Count>103</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2016</Value>
+            <Count>85</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1958</Value>
+            <Count>28</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1922</Value>
+            <Count>76</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1966</Value>
+            <Count>23</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1899</Value>
+            <Count>1886</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1964</Value>
+            <Count>32</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1928</Value>
+            <Count>220</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2011</Value>
+            <Count>40</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1993</Value>
+            <Count>20</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2004</Value>
+            <Count>63</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2014</Value>
+            <Count>276</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1923</Value>
+            <Count>113</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1971</Value>
+            <Count>24</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1921</Value>
+            <Count>88</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1901</Value>
+            <Count>1164</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1918</Value>
+            <Count>22</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1957</Value>
+            <Count>33</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2007</Value>
+            <Count>336</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2001</Value>
+            <Count>34</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>D4</Value>
+            <Count>343</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1913</Value>
+            <Count>96</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1900</Value>
+            <Count>594</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1927</Value>
+            <Count>169</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1911</Value>
+            <Count>31</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1908</Value>
+            <Count>26</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1951</Value>
+            <Count>40</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1909</Value>
+            <Count>24</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1997</Value>
+            <Count>28</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C6</Value>
+            <Count>254</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2005</Value>
+            <Count>176</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2000</Value>
+            <Count>25</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1965</Value>
+            <Count>84</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1800</Value>
+            <Count>43</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1924</Value>
+            <Count>78</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1960</Value>
+            <Count>154</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2015</Value>
+            <Count>305</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1917</Value>
+            <Count>37</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2010</Value>
+            <Count>95</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1989</Value>
+            <Count>26</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1905</Value>
+            <Count>439</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1999</Value>
+            <Count>20</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1932</Value>
+            <Count>31</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1916</Value>
+            <Count>150</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1974</Value>
+            <Count>24</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1920</Value>
+            <Count>1543</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2012</Value>
+            <Count>159</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1959</Value>
+            <Count>32</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1914</Value>
+            <Count>89</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2002</Value>
+            <Count>46</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1907</Value>
+            <Count>30</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1926</Value>
+            <Count>183</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1915</Value>
+            <Count>315</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2003</Value>
+            <Count>71</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1970</Value>
+            <Count>58</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1929</Value>
+            <Count>61</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1906</Value>
+            <Count>43</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2013</Value>
+            <Count>146</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1962</Value>
+            <Count>27</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1933</Value>
+            <Count>31</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1925</Value>
+            <Count>798</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1996</Value>
+            <Count>20</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1910</Value>
+            <Count>1341</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1931</Value>
+            <Count>1950</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1954</Value>
+            <Count>22</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1990</Value>
+            <Count>26</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1975</Value>
+            <Count>27</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>0</Value>
+            <Count>1917</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1919</Value>
+            <Count>22</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgBuilding" RowCount="19998" />
+        <Column Name="LandUse" SqlDbType="NVarChar" MaxLength="100" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>102</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>2</Value>
+            <Count>4524</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1900,2</Value>
+            <Count>65</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1906,3</Value>
+            <Count>20</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1929,3</Value>
+            <Count>43</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>3</Value>
+            <Count>710</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>6</Value>
+            <Count>695</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>11</Value>
+            <Count>369</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1926,3</Value>
+            <Count>35</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>4</Value>
+            <Count>2044</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>10</Value>
+            <Count>238</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1928,3</Value>
+            <Count>39</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>7</Value>
+            <Count>74</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>8</Value>
+            <Count>319</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>5</Value>
+            <Count>907</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>NA</Value>
+            <Count>4577</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1</Value>
+            <Count>4920</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1920,2</Value>
+            <Count>50</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq1" IsExact="true">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgCustomer" RowCount="19998" />
+        <Column Name="Customer ID" SqlDbType="NVarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq1" IsExact="true">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgCustomer" RowCount="19998" />
+        <Column Name="Full Name" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq1" IsExact="true">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgCustomer" RowCount="19998" />
+        <Column Name="Address" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq1" IsExact="true">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgCustomer" RowCount="19998" />
+        <Column Name="Age" SqlDbType="Decimal" MaxLength="0" Precision="18" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq1">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgCustomer" RowCount="19998" />
+        <Column Name="Age" SqlDbType="Decimal" MaxLength="0" Precision="18" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>20</MinValue>
+        <MaxValue>60</MaxValue>
+        <Mean>40.1980198019802</Mean>
+        <StdDev>11.850436083231</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq1" IsExact="true">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgCustomer" RowCount="19998" />
+        <Column Name="Customer ID" SqlDbType="NVarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>4</MinLength>
+        <MaxLength>7</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>6</Length>
+            <Count>2564</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>7</Length>
+            <Count>17165</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>4</Length>
+            <Count>23</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>5</Length>
+            <Count>246</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq1" IsExact="true">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgCustomer" RowCount="19998" />
+        <Column Name="Full Name" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>6</MinLength>
+        <MaxLength>23</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>23</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>15</Length>
+            <Count>2356</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>9</Length>
+            <Count>492</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>12</Length>
+            <Count>3520</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>6</Length>
+            <Count>2</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>21</Length>
+            <Count>21</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>7</Length>
+            <Count>15</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>18</Length>
+            <Count>331</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>10</Length>
+            <Count>1391</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>19</Length>
+            <Count>144</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>13</Length>
+            <Count>3730</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>22</Length>
+            <Count>3</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>16</Length>
+            <Count>1342</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>17</Length>
+            <Count>693</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>11</Length>
+            <Count>2575</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>20</Length>
+            <Count>61</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>14</Length>
+            <Count>3196</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>8</Length>
+            <Count>125</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq1" IsExact="true">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgCustomer" RowCount="19998" />
+        <Column Name="Address" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>2</MinLength>
+        <MaxLength>27</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>23</Length>
+            <Count>177</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>15</Length>
+            <Count>722</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>9</Length>
+            <Count>14</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>12</Length>
+            <Count>1002</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>21</Length>
+            <Count>602</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>27</Length>
+            <Count>2</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>24</Length>
+            <Count>160</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>18</Length>
+            <Count>3007</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>10</Length>
+            <Count>62</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>19</Length>
+            <Count>1952</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>25</Length>
+            <Count>7</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>13</Length>
+            <Count>1537</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>22</Length>
+            <Count>209</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>16</Length>
+            <Count>1532</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>2</Length>
+            <Count>4533</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>17</Length>
+            <Count>1958</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>11</Length>
+            <Count>127</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>20</Length>
+            <Count>1071</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>14</Length>
+            <Count>1320</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>8</Length>
+            <Count>4</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq1">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgCustomer" RowCount="19998" />
+        <KeyColumns>
+          <Column Name="Customer ID" SqlDbType="NVarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>true</IsExactKey>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq1">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgCustomer" RowCount="19998" />
+        <Column Name="Customer ID" SqlDbType="NVarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>19998</NumberOfDistinctValues>
+      </ColumnValueDistributionProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq1">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgCustomer" RowCount="19998" />
+        <KeyColumns>
+          <Column Name="Full Name" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>false</IsExactKey>
+        <KeyStrength>0.9756976</KeyStrength>
+        <KeyViolations>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>William Johnson</ColumnValue>
+            </ColumnValues>
+            <Count>5</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>James Jones</ColumnValue>
+            </ColumnValues>
+            <Count>5</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Robert Smith</ColumnValue>
+            </ColumnValues>
+            <Count>5</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>John Jones</ColumnValue>
+            </ColumnValues>
+            <Count>5</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>James Smith</ColumnValue>
+            </ColumnValues>
+            <Count>4</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Robert Davis</ColumnValue>
+            </ColumnValues>
+            <Count>4</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Mary Williams</ColumnValue>
+            </ColumnValues>
+            <Count>4</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Jennifer Johnson</ColumnValue>
+            </ColumnValues>
+            <Count>4</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>William Williams</ColumnValue>
+            </ColumnValues>
+            <Count>4</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>John Williams</ColumnValue>
+            </ColumnValues>
+            <Count>4</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>John Smith</ColumnValue>
+            </ColumnValues>
+            <Count>4</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Michael Taylor</ColumnValue>
+            </ColumnValues>
+            <Count>4</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>David Williams</ColumnValue>
+            </ColumnValues>
+            <Count>4</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>James Allen</ColumnValue>
+            </ColumnValues>
+            <Count>4</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Joseph Smith</ColumnValue>
+            </ColumnValues>
+            <Count>4</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Robert Jones</ColumnValue>
+            </ColumnValues>
+            <Count>4</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Mary Johnson</ColumnValue>
+            </ColumnValues>
+            <Count>3</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>John Brown</ColumnValue>
+            </ColumnValues>
+            <Count>3</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Daniel Smith</ColumnValue>
+            </ColumnValues>
+            <Count>3</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Charles Thomas</ColumnValue>
+            </ColumnValues>
+            <Count>3</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Richard Johnson</ColumnValue>
+            </ColumnValues>
+            <Count>3</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Margaret Johnson</ColumnValue>
+            </ColumnValues>
+            <Count>3</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Michael Smith</ColumnValue>
+            </ColumnValues>
+            <Count>3</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Amy Smith</ColumnValue>
+            </ColumnValues>
+            <Count>3</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>John White</ColumnValue>
+            </ColumnValues>
+            <Count>3</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Michael Anderson</ColumnValue>
+            </ColumnValues>
+            <Count>3</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Robert Jackson</ColumnValue>
+            </ColumnValues>
+            <Count>3</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>James Adams</ColumnValue>
+            </ColumnValues>
+            <Count>3</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Mary Garcia</ColumnValue>
+            </ColumnValues>
+            <Count>3</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Robert Miller</ColumnValue>
+            </ColumnValues>
+            <Count>3</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Robert Robinson</ColumnValue>
+            </ColumnValues>
+            <Count>3</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Michael Johnson</ColumnValue>
+            </ColumnValues>
+            <Count>3</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Charles Anderson</ColumnValue>
+            </ColumnValues>
+            <Count>3</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Ashley Williams</ColumnValue>
+            </ColumnValues>
+            <Count>3</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Mark Campbell</ColumnValue>
+            </ColumnValues>
+            <Count>3</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>John Romero</ColumnValue>
+            </ColumnValues>
+            <Count>3</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Amanda Smith</ColumnValue>
+            </ColumnValues>
+            <Count>3</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>James Taylor</ColumnValue>
+            </ColumnValues>
+            <Count>3</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Karen Brown</ColumnValue>
+            </ColumnValues>
+            <Count>3</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>John Martin</ColumnValue>
+            </ColumnValues>
+            <Count>3</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Larry Smith</ColumnValue>
+            </ColumnValues>
+            <Count>3</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Donna Wilson</ColumnValue>
+            </ColumnValues>
+            <Count>3</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Joseph Rodriguez</ColumnValue>
+            </ColumnValues>
+            <Count>3</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Linda Ward</ColumnValue>
+            </ColumnValues>
+            <Count>3</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Mary Smith</ColumnValue>
+            </ColumnValues>
+            <Count>3</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Richard White</ColumnValue>
+            </ColumnValues>
+            <Count>3</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>William Jones</ColumnValue>
+            </ColumnValues>
+            <Count>3</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Bobby Roberts</ColumnValue>
+            </ColumnValues>
+            <Count>3</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Richard Smith</ColumnValue>
+            </ColumnValues>
+            <Count>3</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>James Johnson</ColumnValue>
+            </ColumnValues>
+            <Count>3</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>James Walker</ColumnValue>
+            </ColumnValues>
+            <Count>3</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Donald Miller</ColumnValue>
+            </ColumnValues>
+            <Count>3</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>James Robinson</ColumnValue>
+            </ColumnValues>
+            <Count>3</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>John Davis</ColumnValue>
+            </ColumnValues>
+            <Count>3</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>William Gonzalez</ColumnValue>
+            </ColumnValues>
+            <Count>3</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Richard Anderson</ColumnValue>
+            </ColumnValues>
+            <Count>3</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>David Davis</ColumnValue>
+            </ColumnValues>
+            <Count>3</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Carol Williams</ColumnValue>
+            </ColumnValues>
+            <Count>3</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Edward Smith</ColumnValue>
+            </ColumnValues>
+            <Count>3</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>David Jackson</ColumnValue>
+            </ColumnValues>
+            <Count>3</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Michael Rodriguez</ColumnValue>
+            </ColumnValues>
+            <Count>3</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>David Brooks</ColumnValue>
+            </ColumnValues>
+            <Count>3</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Mary Simpson</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Karen Smith</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>John Lewis</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Timothy Perez</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>William Turner</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Donald Torres</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Christina Jones</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Jason Jones</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Jessie Jones</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Michael Williams</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Donald Ford</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Mark Daniels</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Charles Davis</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Patricia Garcia</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Linda Johnson</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Oscar Clark</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>David Bowers</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>James Erickson</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>John Jackson</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Michael Brown</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Joyce Williams</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Julie Roberts</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Christine Jones</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Michael Clark</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Mary Barnes</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Edward White</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Tony Smith</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Douglas Johnson</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Charles Smith</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Brian Harper</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Thomas Johnson</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Annie Wood</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>William Fuller</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Mary Jackson</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Gary Miller</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Eric Miller</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>Matthew Anderson</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>James Murray</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+        </KeyViolations>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq1">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgCustomer" RowCount="19998" />
+        <Column Name="Full Name" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>19512</NumberOfDistinctValues>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq1">
+        <DataSourceID>{5DC8F2FF-AF95-4A1A-B284-4F01E255C4C9}</DataSourceID>
+        <Table DataSource="LAPTOP-520VJR13" Database="Brooklyn_Home_Sales_Staging" Schema="dbo" Table="StgCustomer" RowCount="19998" />
+        <Column Name="Address" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>13410</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>NA</Value>
+            <Count>4533</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+    </Profiles>
+  </DataProfileOutput>
+</DataProfile>

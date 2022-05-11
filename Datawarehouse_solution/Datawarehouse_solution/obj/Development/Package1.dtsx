@@ -1,0 +1,1753 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="5/6/2022 7:38:18 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAPTOP-520VJR13"
+  DTS:CreatorName="LAPTOP-520VJR13\cgavi"
+  DTS:DTSID="{23096AC7-7985-47F6-AD86-22CABEEDD2FF}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{EAAEA716-E7A1-4D40-A126-EB84081DAC35}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{A43F9F5D-B23C-4FA7-A96F-CAD556D1B98B}"
+      DTS:ObjectName="Flat File Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Brooklyn Home Sales\DataSources\accm_txn_complete_time.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="txn_id"
+              DTS:DTSID="{E39DBFD6-1A90-4B2C-AAD9-F934FBD6C96A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="accm_txn_complete_time"
+              DTS:DTSID="{AA17B5A2-EC39-40E0-9D60-FC162871B0FB}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LAPTOP-520VJR13.Brooklyn_Home_Sales_DW.sa]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{96C77B5A-719A-4B56-8F5D-48C574FBF5D5}"
+      DTS:ObjectName="LAPTOP-520VJR13.Brooklyn_Home_Sales_DW.sa">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=LAPTOP-520VJR13;User ID=sa;Initial Catalog=Brooklyn_Home_Sales_DW;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAADylQOmkuXk6e5D725KAx9gAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACa4u2FRJhpMgnArXZCxudQvymLtInZA2+Mawtu+sex+wAAAAAOgAAAAAIAACAAAAALZSYJkUIuGwaz383xVMuQ9C2K/ABKLld2CApsaarmICAAAAAz3SXVwbX4ypn0Dqlq70uaTfA0op1bMhFreO6kLzp11kAAAAAjHinAxLwz66y8JrGxTirXWyiQip2hgAskZWVCp+c/xtrsEf+VNG+pKT+UXpZFPEGJetUdGoRysKe+eXc/ihoM</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Extract accm_txn_complete_time"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{AB34FA54-FAFB-4E09-A50E-06F92736A1FE}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Extract accm_txn_complete_time"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Extract accm_txn_complete_time\Calculate process time hours"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Calculate process time hours"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Extract accm_txn_complete_time\Calculate process time hours.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extract accm_txn_complete_time\Calculate process time hours.Inputs[Derived Column Input].Columns[accm_txn_complete_time]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="accm_txn_complete_time"
+                      lineageId="Package\Extract accm_txn_complete_time\Merge Join.Outputs[Merge Join Output].Columns[accm_txn_complete_time]" />
+                    <inputColumn
+                      refId="Package\Extract accm_txn_complete_time\Calculate process time hours.Inputs[Derived Column Input].Columns[accm_txn_create_time]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="accm_txn_create_time"
+                      lineageId="Package\Extract accm_txn_complete_time\Merge Join.Outputs[Merge Join Output].Columns[accm_txn_create_time]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Extract accm_txn_complete_time\Calculate process time hours.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Extract accm_txn_complete_time\Calculate process time hours.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract accm_txn_complete_time\Calculate process time hours.Outputs[Derived Column Output].Columns[process_time_hours]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Extract accm_txn_complete_time\Calculate process time hours.Outputs[Derived Column Output].Columns[process_time_hours]"
+                      name="process_time_hours"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[DATEDIFF]("hh",#{Package\Extract accm_txn_complete_time\Merge Join.Outputs[Merge Join Output].Columns[accm_txn_create_time]},#{Package\Extract accm_txn_complete_time\Merge Join.Outputs[Merge Join Output].Columns[accm_txn_complete_time]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">DATEDIFF("hh",accm_txn_create_time,accm_txn_complete_time)</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Extract accm_txn_complete_time\Calculate process time hours.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Extract accm_txn_complete_time\Calculate process time hours.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract accm_txn_complete_time\Calculate process time hours.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract accm_txn_complete_time\Calculate process time hours.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract accm_txn_complete_time\Calculate process time hours.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract accm_txn_complete_time\Calculate process time hours.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Extract accm_txn_complete_time\complete_time_sort"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="complete_time_sort"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Extract accm_txn_complete_time\complete_time_sort.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extract accm_txn_complete_time\complete_time_sort.Inputs[Sort Input].Columns[txn_id]"
+                      cachedDataType="numeric"
+                      cachedName="txn_id"
+                      cachedPrecision="18"
+                      lineageId="Package\Extract accm_txn_complete_time\Extract accm_txn_complete_time.Outputs[Flat File Source Output].Columns[txn_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Extract accm_txn_complete_time\complete_time_sort.Inputs[Sort Input].Columns[accm_txn_complete_time]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="accm_txn_complete_time"
+                      lineageId="Package\Extract accm_txn_complete_time\Extract accm_txn_complete_time.Outputs[Flat File Source Output].Columns[accm_txn_complete_time]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Extract accm_txn_complete_time\complete_time_sort.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract accm_txn_complete_time\complete_time_sort.Outputs[Sort Output].Columns[txn_id]"
+                      dataType="numeric"
+                      lineageId="Package\Extract accm_txn_complete_time\complete_time_sort.Outputs[Sort Output].Columns[txn_id]"
+                      name="txn_id"
+                      precision="18"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Extract accm_txn_complete_time\Extract accm_txn_complete_time.Outputs[Flat File Source Output].Columns[txn_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract accm_txn_complete_time\complete_time_sort.Outputs[Sort Output].Columns[accm_txn_complete_time]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Extract accm_txn_complete_time\complete_time_sort.Outputs[Sort Output].Columns[accm_txn_complete_time]"
+                      name="accm_txn_complete_time">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Extract accm_txn_complete_time\Extract accm_txn_complete_time.Outputs[Flat File Source Output].Columns[accm_txn_complete_time]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Extract accm_txn_complete_time\Extract accm_txn_complete_time"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Extract accm_txn_complete_time"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract accm_txn_complete_time\Extract accm_txn_complete_time.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Extract accm_txn_complete_time\Extract accm_txn_complete_time.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract accm_txn_complete_time\Extract accm_txn_complete_time.Outputs[Flat File Source Output].Columns[txn_id]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract accm_txn_complete_time\Extract accm_txn_complete_time.Outputs[Flat File Source Output].ExternalColumns[txn_id]"
+                      lineageId="Package\Extract accm_txn_complete_time\Extract accm_txn_complete_time.Outputs[Flat File Source Output].Columns[txn_id]"
+                      name="txn_id"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract accm_txn_complete_time\Extract accm_txn_complete_time.Outputs[Flat File Source Output].Columns[accm_txn_complete_time]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract accm_txn_complete_time\Extract accm_txn_complete_time.Outputs[Flat File Source Output].ExternalColumns[accm_txn_complete_time]"
+                      lineageId="Package\Extract accm_txn_complete_time\Extract accm_txn_complete_time.Outputs[Flat File Source Output].Columns[accm_txn_complete_time]"
+                      name="accm_txn_complete_time"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extract accm_txn_complete_time\Extract accm_txn_complete_time.Outputs[Flat File Source Output].ExternalColumns[txn_id]"
+                      dataType="numeric"
+                      name="txn_id"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Extract accm_txn_complete_time\Extract accm_txn_complete_time.Outputs[Flat File Source Output].ExternalColumns[accm_txn_complete_time]"
+                      dataType="wstr"
+                      length="50"
+                      name="accm_txn_complete_time" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Extract accm_txn_complete_time\Extract accm_txn_complete_time.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract accm_txn_complete_time\Extract accm_txn_complete_time.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Extract accm_txn_complete_time\Extract accm_txn_complete_time.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Extract accm_txn_complete_time\Extract accm_txn_complete_time.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract accm_txn_complete_time\Extract accm_txn_complete_time.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract accm_txn_complete_time\Extract accm_txn_complete_time.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract accm_txn_complete_time\Extract accm_txn_complete_time.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Extract accm_txn_complete_time\Extract FactSales"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Extract FactSales"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[FactSales]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract accm_txn_complete_time\Extract FactSales.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAPTOP-520VJR13.Brooklyn_Home_Sales_DW.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-520VJR13.Brooklyn_Home_Sales_DW.sa]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].Columns[SalesID]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].ExternalColumns[SalesID]"
+                      lineageId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].Columns[SalesID]"
+                      name="SalesID"
+                      precision="18"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].Columns[CustomerKey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].ExternalColumns[CustomerKey]"
+                      lineageId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].Columns[CustomerKey]"
+                      name="CustomerKey"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].Columns[BuildingKey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].ExternalColumns[BuildingKey]"
+                      lineageId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].Columns[BuildingKey]"
+                      name="BuildingKey"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].Columns[SalesDateKey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].ExternalColumns[SalesDateKey]"
+                      lineageId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].Columns[SalesDateKey]"
+                      name="SalesDateKey"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].Columns[SalesPrice]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].ExternalColumns[SalesPrice]"
+                      lineageId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].Columns[SalesPrice]"
+                      name="SalesPrice"
+                      precision="18"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].Columns[TotalUnits]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].ExternalColumns[TotalUnits]"
+                      lineageId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].Columns[TotalUnits]"
+                      name="TotalUnits"
+                      precision="18"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].Columns[LandSqft]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].ExternalColumns[LandSqft]"
+                      lineageId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].Columns[LandSqft]"
+                      name="LandSqft"
+                      precision="18"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].Columns[GrossSqft]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].ExternalColumns[GrossSqft]"
+                      lineageId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].Columns[GrossSqft]"
+                      name="GrossSqft"
+                      precision="18"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].Columns[ModifiedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].ExternalColumns[ModifiedDate]"
+                      lineageId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].Columns[ModifiedDate]"
+                      name="ModifiedDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].Columns[accm_txn_create_time]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].ExternalColumns[accm_txn_create_time]"
+                      lineageId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].Columns[accm_txn_create_time]"
+                      name="accm_txn_create_time"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].Columns[accm_txn_complete_time]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].ExternalColumns[accm_txn_complete_time]"
+                      lineageId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].Columns[accm_txn_complete_time]"
+                      name="accm_txn_complete_time"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].Columns[txn_process_time_hours]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].ExternalColumns[txn_process_time_hours]"
+                      lineageId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].Columns[txn_process_time_hours]"
+                      name="txn_process_time_hours"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].ExternalColumns[SalesID]"
+                      dataType="numeric"
+                      name="SalesID"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].ExternalColumns[CustomerKey]"
+                      dataType="i4"
+                      name="CustomerKey" />
+                    <externalMetadataColumn
+                      refId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].ExternalColumns[BuildingKey]"
+                      dataType="i4"
+                      name="BuildingKey" />
+                    <externalMetadataColumn
+                      refId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].ExternalColumns[SalesDateKey]"
+                      dataType="i4"
+                      name="SalesDateKey" />
+                    <externalMetadataColumn
+                      refId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].ExternalColumns[SalesPrice]"
+                      dataType="numeric"
+                      name="SalesPrice"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].ExternalColumns[TotalUnits]"
+                      dataType="numeric"
+                      name="TotalUnits"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].ExternalColumns[LandSqft]"
+                      dataType="numeric"
+                      name="LandSqft"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].ExternalColumns[GrossSqft]"
+                      dataType="numeric"
+                      name="GrossSqft"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].ExternalColumns[ModifiedDate]"
+                      dataType="dbTimeStamp"
+                      name="ModifiedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].ExternalColumns[accm_txn_create_time]"
+                      dataType="dbTimeStamp"
+                      name="accm_txn_create_time" />
+                    <externalMetadataColumn
+                      refId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].ExternalColumns[accm_txn_complete_time]"
+                      dataType="dbTimeStamp"
+                      name="accm_txn_complete_time" />
+                    <externalMetadataColumn
+                      refId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].ExternalColumns[txn_process_time_hours]"
+                      dataType="i4"
+                      name="txn_process_time_hours" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Error Output].Columns[SalesID]"
+                      dataType="numeric"
+                      lineageId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Error Output].Columns[SalesID]"
+                      name="SalesID"
+                      precision="18" />
+                    <outputColumn
+                      refId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Error Output].Columns[CustomerKey]"
+                      dataType="i4"
+                      lineageId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Error Output].Columns[CustomerKey]"
+                      name="CustomerKey" />
+                    <outputColumn
+                      refId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Error Output].Columns[BuildingKey]"
+                      dataType="i4"
+                      lineageId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Error Output].Columns[BuildingKey]"
+                      name="BuildingKey" />
+                    <outputColumn
+                      refId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Error Output].Columns[SalesDateKey]"
+                      dataType="i4"
+                      lineageId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Error Output].Columns[SalesDateKey]"
+                      name="SalesDateKey" />
+                    <outputColumn
+                      refId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Error Output].Columns[SalesPrice]"
+                      dataType="numeric"
+                      lineageId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Error Output].Columns[SalesPrice]"
+                      name="SalesPrice"
+                      precision="18" />
+                    <outputColumn
+                      refId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Error Output].Columns[TotalUnits]"
+                      dataType="numeric"
+                      lineageId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Error Output].Columns[TotalUnits]"
+                      name="TotalUnits"
+                      precision="18" />
+                    <outputColumn
+                      refId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Error Output].Columns[LandSqft]"
+                      dataType="numeric"
+                      lineageId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Error Output].Columns[LandSqft]"
+                      name="LandSqft"
+                      precision="18" />
+                    <outputColumn
+                      refId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Error Output].Columns[GrossSqft]"
+                      dataType="numeric"
+                      lineageId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Error Output].Columns[GrossSqft]"
+                      name="GrossSqft"
+                      precision="18" />
+                    <outputColumn
+                      refId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Error Output].Columns[ModifiedDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Error Output].Columns[ModifiedDate]"
+                      name="ModifiedDate" />
+                    <outputColumn
+                      refId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Error Output].Columns[accm_txn_create_time]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Error Output].Columns[accm_txn_create_time]"
+                      name="accm_txn_create_time" />
+                    <outputColumn
+                      refId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Error Output].Columns[accm_txn_complete_time]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Error Output].Columns[accm_txn_complete_time]"
+                      name="accm_txn_complete_time" />
+                    <outputColumn
+                      refId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Error Output].Columns[txn_process_time_hours]"
+                      dataType="i4"
+                      lineageId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Error Output].Columns[txn_process_time_hours]"
+                      name="txn_process_time_hours" />
+                    <outputColumn
+                      refId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Extract accm_txn_complete_time\FactSales sort"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="FactSales sort"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Extract accm_txn_complete_time\FactSales sort.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extract accm_txn_complete_time\FactSales sort.Inputs[Sort Input].Columns[SalesID]"
+                      cachedDataType="numeric"
+                      cachedName="SalesID"
+                      cachedPrecision="18"
+                      lineageId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].Columns[SalesID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Extract accm_txn_complete_time\FactSales sort.Inputs[Sort Input].Columns[CustomerKey]"
+                      cachedDataType="i4"
+                      cachedName="CustomerKey"
+                      lineageId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].Columns[CustomerKey]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Extract accm_txn_complete_time\FactSales sort.Inputs[Sort Input].Columns[BuildingKey]"
+                      cachedDataType="i4"
+                      cachedName="BuildingKey"
+                      lineageId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].Columns[BuildingKey]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Extract accm_txn_complete_time\FactSales sort.Inputs[Sort Input].Columns[SalesDateKey]"
+                      cachedDataType="i4"
+                      cachedName="SalesDateKey"
+                      lineageId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].Columns[SalesDateKey]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Extract accm_txn_complete_time\FactSales sort.Inputs[Sort Input].Columns[SalesPrice]"
+                      cachedDataType="numeric"
+                      cachedName="SalesPrice"
+                      cachedPrecision="18"
+                      lineageId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].Columns[SalesPrice]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Extract accm_txn_complete_time\FactSales sort.Inputs[Sort Input].Columns[TotalUnits]"
+                      cachedDataType="numeric"
+                      cachedName="TotalUnits"
+                      cachedPrecision="18"
+                      lineageId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].Columns[TotalUnits]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Extract accm_txn_complete_time\FactSales sort.Inputs[Sort Input].Columns[LandSqft]"
+                      cachedDataType="numeric"
+                      cachedName="LandSqft"
+                      cachedPrecision="18"
+                      lineageId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].Columns[LandSqft]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Extract accm_txn_complete_time\FactSales sort.Inputs[Sort Input].Columns[GrossSqft]"
+                      cachedDataType="numeric"
+                      cachedName="GrossSqft"
+                      cachedPrecision="18"
+                      lineageId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].Columns[GrossSqft]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Extract accm_txn_complete_time\FactSales sort.Inputs[Sort Input].Columns[ModifiedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="ModifiedDate"
+                      lineageId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].Columns[ModifiedDate]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Extract accm_txn_complete_time\FactSales sort.Inputs[Sort Input].Columns[accm_txn_create_time]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="accm_txn_create_time"
+                      lineageId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].Columns[accm_txn_create_time]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Extract accm_txn_complete_time\FactSales sort.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract accm_txn_complete_time\FactSales sort.Outputs[Sort Output].Columns[SalesID]"
+                      dataType="numeric"
+                      lineageId="Package\Extract accm_txn_complete_time\FactSales sort.Outputs[Sort Output].Columns[SalesID]"
+                      name="SalesID"
+                      precision="18"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].Columns[SalesID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract accm_txn_complete_time\FactSales sort.Outputs[Sort Output].Columns[CustomerKey]"
+                      dataType="i4"
+                      lineageId="Package\Extract accm_txn_complete_time\FactSales sort.Outputs[Sort Output].Columns[CustomerKey]"
+                      name="CustomerKey">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].Columns[CustomerKey]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract accm_txn_complete_time\FactSales sort.Outputs[Sort Output].Columns[BuildingKey]"
+                      dataType="i4"
+                      lineageId="Package\Extract accm_txn_complete_time\FactSales sort.Outputs[Sort Output].Columns[BuildingKey]"
+                      name="BuildingKey">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].Columns[BuildingKey]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract accm_txn_complete_time\FactSales sort.Outputs[Sort Output].Columns[SalesDateKey]"
+                      dataType="i4"
+                      lineageId="Package\Extract accm_txn_complete_time\FactSales sort.Outputs[Sort Output].Columns[SalesDateKey]"
+                      name="SalesDateKey">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].Columns[SalesDateKey]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract accm_txn_complete_time\FactSales sort.Outputs[Sort Output].Columns[SalesPrice]"
+                      dataType="numeric"
+                      lineageId="Package\Extract accm_txn_complete_time\FactSales sort.Outputs[Sort Output].Columns[SalesPrice]"
+                      name="SalesPrice"
+                      precision="18">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].Columns[SalesPrice]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract accm_txn_complete_time\FactSales sort.Outputs[Sort Output].Columns[TotalUnits]"
+                      dataType="numeric"
+                      lineageId="Package\Extract accm_txn_complete_time\FactSales sort.Outputs[Sort Output].Columns[TotalUnits]"
+                      name="TotalUnits"
+                      precision="18">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].Columns[TotalUnits]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract accm_txn_complete_time\FactSales sort.Outputs[Sort Output].Columns[LandSqft]"
+                      dataType="numeric"
+                      lineageId="Package\Extract accm_txn_complete_time\FactSales sort.Outputs[Sort Output].Columns[LandSqft]"
+                      name="LandSqft"
+                      precision="18">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].Columns[LandSqft]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract accm_txn_complete_time\FactSales sort.Outputs[Sort Output].Columns[GrossSqft]"
+                      dataType="numeric"
+                      lineageId="Package\Extract accm_txn_complete_time\FactSales sort.Outputs[Sort Output].Columns[GrossSqft]"
+                      name="GrossSqft"
+                      precision="18">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].Columns[GrossSqft]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract accm_txn_complete_time\FactSales sort.Outputs[Sort Output].Columns[ModifiedDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Extract accm_txn_complete_time\FactSales sort.Outputs[Sort Output].Columns[ModifiedDate]"
+                      name="ModifiedDate">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].Columns[ModifiedDate]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract accm_txn_complete_time\FactSales sort.Outputs[Sort Output].Columns[accm_txn_create_time]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Extract accm_txn_complete_time\FactSales sort.Outputs[Sort Output].Columns[accm_txn_create_time]"
+                      name="accm_txn_create_time">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output].Columns[accm_txn_create_time]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Extract accm_txn_complete_time\Load complete time updated fact sales"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="Load complete time updated fact sales"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE [dbo].[FactSales]
+SET[accm_txn_complete_time]=?,[txn_process_time_hours]=?
+WHERE [SalesID]=?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract accm_txn_complete_time\Load complete time updated fact sales.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAPTOP-520VJR13.Brooklyn_Home_Sales_DW.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-520VJR13.Brooklyn_Home_Sales_DW.sa]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Extract accm_txn_complete_time\Load complete time updated fact sales.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extract accm_txn_complete_time\Load complete time updated fact sales.Inputs[OLE DB Command Input].Columns[accm_txn_complete_time]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="accm_txn_complete_time"
+                      externalMetadataColumnId="Package\Extract accm_txn_complete_time\Load complete time updated fact sales.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\Extract accm_txn_complete_time\Merge Join.Outputs[Merge Join Output].Columns[accm_txn_complete_time]" />
+                    <inputColumn
+                      refId="Package\Extract accm_txn_complete_time\Load complete time updated fact sales.Inputs[OLE DB Command Input].Columns[process_time_hours]"
+                      cachedDataType="i4"
+                      cachedName="process_time_hours"
+                      externalMetadataColumnId="Package\Extract accm_txn_complete_time\Load complete time updated fact sales.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\Extract accm_txn_complete_time\Calculate process time hours.Outputs[Derived Column Output].Columns[process_time_hours]" />
+                    <inputColumn
+                      refId="Package\Extract accm_txn_complete_time\Load complete time updated fact sales.Inputs[OLE DB Command Input].Columns[SalesID]"
+                      cachedDataType="numeric"
+                      cachedName="SalesID"
+                      cachedPrecision="18"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Extract accm_txn_complete_time\Load complete time updated fact sales.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      lineageId="Package\Extract accm_txn_complete_time\Merge Join.Outputs[Merge Join Output].Columns[SalesID]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extract accm_txn_complete_time\Load complete time updated fact sales.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="dbTimeStamp"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Extract accm_txn_complete_time\Load complete time updated fact sales.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      dataType="i4"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Extract accm_txn_complete_time\Load complete time updated fact sales.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      dataType="numeric"
+                      name="Param_2"
+                      precision="18">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Extract accm_txn_complete_time\Load complete time updated fact sales.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\Extract accm_txn_complete_time\Load complete time updated fact sales.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Extract accm_txn_complete_time\Load complete time updated fact sales.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\Extract accm_txn_complete_time\Load complete time updated fact sales.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract accm_txn_complete_time\Load complete time updated fact sales.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract accm_txn_complete_time\Load complete time updated fact sales.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract accm_txn_complete_time\Load complete time updated fact sales.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract accm_txn_complete_time\Load complete time updated fact sales.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Extract accm_txn_complete_time\Merge Join"
+              componentClassID="Microsoft.MergeJoin"
+              contactInfo="Merge Join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combine two sorted data flows into one using the FULL, LEFT, or INNER join. We recommend this transformation when data flows can be sorted at their sources."
+              name="Merge Join"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of join to perform."
+                  name="JoinType"
+                  typeConverter="JoinType">2</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the number of columns in the ordering key."
+                  name="NumKeyColumns">1</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the null values are treated as equal values."
+                  name="TreatNullsAsEqual">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Indicates the requested maximum buffers per input before blocking."
+                  name="MaxBuffersPerInput">5</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Extract accm_txn_complete_time\Merge Join.Inputs[Merge Join Left Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Left Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extract accm_txn_complete_time\Merge Join.Inputs[Merge Join Left Input].Columns[SalesID]"
+                      cachedDataType="numeric"
+                      cachedName="SalesID"
+                      cachedPrecision="18"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Extract accm_txn_complete_time\FactSales sort.Outputs[Sort Output].Columns[SalesID]" />
+                    <inputColumn
+                      refId="Package\Extract accm_txn_complete_time\Merge Join.Inputs[Merge Join Left Input].Columns[CustomerKey]"
+                      cachedDataType="i4"
+                      cachedName="CustomerKey"
+                      lineageId="Package\Extract accm_txn_complete_time\FactSales sort.Outputs[Sort Output].Columns[CustomerKey]" />
+                    <inputColumn
+                      refId="Package\Extract accm_txn_complete_time\Merge Join.Inputs[Merge Join Left Input].Columns[BuildingKey]"
+                      cachedDataType="i4"
+                      cachedName="BuildingKey"
+                      lineageId="Package\Extract accm_txn_complete_time\FactSales sort.Outputs[Sort Output].Columns[BuildingKey]" />
+                    <inputColumn
+                      refId="Package\Extract accm_txn_complete_time\Merge Join.Inputs[Merge Join Left Input].Columns[SalesDateKey]"
+                      cachedDataType="i4"
+                      cachedName="SalesDateKey"
+                      lineageId="Package\Extract accm_txn_complete_time\FactSales sort.Outputs[Sort Output].Columns[SalesDateKey]" />
+                    <inputColumn
+                      refId="Package\Extract accm_txn_complete_time\Merge Join.Inputs[Merge Join Left Input].Columns[SalesPrice]"
+                      cachedDataType="numeric"
+                      cachedName="SalesPrice"
+                      cachedPrecision="18"
+                      lineageId="Package\Extract accm_txn_complete_time\FactSales sort.Outputs[Sort Output].Columns[SalesPrice]" />
+                    <inputColumn
+                      refId="Package\Extract accm_txn_complete_time\Merge Join.Inputs[Merge Join Left Input].Columns[TotalUnits]"
+                      cachedDataType="numeric"
+                      cachedName="TotalUnits"
+                      cachedPrecision="18"
+                      lineageId="Package\Extract accm_txn_complete_time\FactSales sort.Outputs[Sort Output].Columns[TotalUnits]" />
+                    <inputColumn
+                      refId="Package\Extract accm_txn_complete_time\Merge Join.Inputs[Merge Join Left Input].Columns[LandSqft]"
+                      cachedDataType="numeric"
+                      cachedName="LandSqft"
+                      cachedPrecision="18"
+                      lineageId="Package\Extract accm_txn_complete_time\FactSales sort.Outputs[Sort Output].Columns[LandSqft]" />
+                    <inputColumn
+                      refId="Package\Extract accm_txn_complete_time\Merge Join.Inputs[Merge Join Left Input].Columns[GrossSqft]"
+                      cachedDataType="numeric"
+                      cachedName="GrossSqft"
+                      cachedPrecision="18"
+                      lineageId="Package\Extract accm_txn_complete_time\FactSales sort.Outputs[Sort Output].Columns[GrossSqft]" />
+                    <inputColumn
+                      refId="Package\Extract accm_txn_complete_time\Merge Join.Inputs[Merge Join Left Input].Columns[ModifiedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="ModifiedDate"
+                      lineageId="Package\Extract accm_txn_complete_time\FactSales sort.Outputs[Sort Output].Columns[ModifiedDate]" />
+                    <inputColumn
+                      refId="Package\Extract accm_txn_complete_time\Merge Join.Inputs[Merge Join Left Input].Columns[accm_txn_create_time]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="accm_txn_create_time"
+                      lineageId="Package\Extract accm_txn_complete_time\FactSales sort.Outputs[Sort Output].Columns[accm_txn_create_time]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Extract accm_txn_complete_time\Merge Join.Inputs[Merge Join Right Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Right Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extract accm_txn_complete_time\Merge Join.Inputs[Merge Join Right Input].Columns[txn_id]"
+                      cachedDataType="numeric"
+                      cachedName="txn_id"
+                      cachedPrecision="18"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Extract accm_txn_complete_time\complete_time_sort.Outputs[Sort Output].Columns[txn_id]" />
+                    <inputColumn
+                      refId="Package\Extract accm_txn_complete_time\Merge Join.Inputs[Merge Join Right Input].Columns[accm_txn_complete_time]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="accm_txn_complete_time"
+                      lineageId="Package\Extract accm_txn_complete_time\complete_time_sort.Outputs[Sort Output].Columns[accm_txn_complete_time]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Extract accm_txn_complete_time\Merge Join.Outputs[Merge Join Output]"
+                  isSorted="true"
+                  name="Merge Join Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract accm_txn_complete_time\Merge Join.Outputs[Merge Join Output].Columns[SalesID]"
+                      dataType="numeric"
+                      lineageId="Package\Extract accm_txn_complete_time\Merge Join.Outputs[Merge Join Output].Columns[SalesID]"
+                      name="SalesID"
+                      precision="18"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Extract accm_txn_complete_time\Merge Join.Inputs[Merge Join Left Input].Columns[SalesID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract accm_txn_complete_time\Merge Join.Outputs[Merge Join Output].Columns[CustomerKey]"
+                      dataType="i4"
+                      lineageId="Package\Extract accm_txn_complete_time\Merge Join.Outputs[Merge Join Output].Columns[CustomerKey]"
+                      name="CustomerKey">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Extract accm_txn_complete_time\Merge Join.Inputs[Merge Join Left Input].Columns[CustomerKey]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract accm_txn_complete_time\Merge Join.Outputs[Merge Join Output].Columns[BuildingKey]"
+                      dataType="i4"
+                      lineageId="Package\Extract accm_txn_complete_time\Merge Join.Outputs[Merge Join Output].Columns[BuildingKey]"
+                      name="BuildingKey">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Extract accm_txn_complete_time\Merge Join.Inputs[Merge Join Left Input].Columns[BuildingKey]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract accm_txn_complete_time\Merge Join.Outputs[Merge Join Output].Columns[SalesDateKey]"
+                      dataType="i4"
+                      lineageId="Package\Extract accm_txn_complete_time\Merge Join.Outputs[Merge Join Output].Columns[SalesDateKey]"
+                      name="SalesDateKey">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Extract accm_txn_complete_time\Merge Join.Inputs[Merge Join Left Input].Columns[SalesDateKey]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract accm_txn_complete_time\Merge Join.Outputs[Merge Join Output].Columns[SalesPrice]"
+                      dataType="numeric"
+                      lineageId="Package\Extract accm_txn_complete_time\Merge Join.Outputs[Merge Join Output].Columns[SalesPrice]"
+                      name="SalesPrice"
+                      precision="18">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Extract accm_txn_complete_time\Merge Join.Inputs[Merge Join Left Input].Columns[SalesPrice]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract accm_txn_complete_time\Merge Join.Outputs[Merge Join Output].Columns[TotalUnits]"
+                      dataType="numeric"
+                      lineageId="Package\Extract accm_txn_complete_time\Merge Join.Outputs[Merge Join Output].Columns[TotalUnits]"
+                      name="TotalUnits"
+                      precision="18">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Extract accm_txn_complete_time\Merge Join.Inputs[Merge Join Left Input].Columns[TotalUnits]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract accm_txn_complete_time\Merge Join.Outputs[Merge Join Output].Columns[LandSqft]"
+                      dataType="numeric"
+                      lineageId="Package\Extract accm_txn_complete_time\Merge Join.Outputs[Merge Join Output].Columns[LandSqft]"
+                      name="LandSqft"
+                      precision="18">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Extract accm_txn_complete_time\Merge Join.Inputs[Merge Join Left Input].Columns[LandSqft]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract accm_txn_complete_time\Merge Join.Outputs[Merge Join Output].Columns[GrossSqft]"
+                      dataType="numeric"
+                      lineageId="Package\Extract accm_txn_complete_time\Merge Join.Outputs[Merge Join Output].Columns[GrossSqft]"
+                      name="GrossSqft"
+                      precision="18">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Extract accm_txn_complete_time\Merge Join.Inputs[Merge Join Left Input].Columns[GrossSqft]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract accm_txn_complete_time\Merge Join.Outputs[Merge Join Output].Columns[ModifiedDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Extract accm_txn_complete_time\Merge Join.Outputs[Merge Join Output].Columns[ModifiedDate]"
+                      name="ModifiedDate">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Extract accm_txn_complete_time\Merge Join.Inputs[Merge Join Left Input].Columns[ModifiedDate]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract accm_txn_complete_time\Merge Join.Outputs[Merge Join Output].Columns[accm_txn_complete_time]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Extract accm_txn_complete_time\Merge Join.Outputs[Merge Join Output].Columns[accm_txn_complete_time]"
+                      name="accm_txn_complete_time">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Extract accm_txn_complete_time\Merge Join.Inputs[Merge Join Right Input].Columns[accm_txn_complete_time]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract accm_txn_complete_time\Merge Join.Outputs[Merge Join Output].Columns[accm_txn_create_time]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Extract accm_txn_complete_time\Merge Join.Outputs[Merge Join Output].Columns[accm_txn_create_time]"
+                      name="accm_txn_create_time">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Extract accm_txn_complete_time\Merge Join.Inputs[Merge Join Left Input].Columns[accm_txn_create_time]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Extract accm_txn_complete_time.Paths[Derived Column Output]"
+              endId="Package\Extract accm_txn_complete_time\Load complete time updated fact sales.Inputs[OLE DB Command Input]"
+              name="Derived Column Output"
+              startId="Package\Extract accm_txn_complete_time\Calculate process time hours.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Extract accm_txn_complete_time.Paths[Flat File Source Output]"
+              endId="Package\Extract accm_txn_complete_time\complete_time_sort.Inputs[Sort Input]"
+              name="Flat File Source Output"
+              startId="Package\Extract accm_txn_complete_time\Extract accm_txn_complete_time.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Extract accm_txn_complete_time.Paths[Merge Join Output]"
+              endId="Package\Extract accm_txn_complete_time\Calculate process time hours.Inputs[Derived Column Input]"
+              name="Merge Join Output"
+              startId="Package\Extract accm_txn_complete_time\Merge Join.Outputs[Merge Join Output]" />
+            <path
+              refId="Package\Extract accm_txn_complete_time.Paths[OLE DB Source Output]"
+              endId="Package\Extract accm_txn_complete_time\FactSales sort.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\Extract accm_txn_complete_time\Extract FactSales.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Extract accm_txn_complete_time.Paths[Sort Output]"
+              endId="Package\Extract accm_txn_complete_time\Merge Join.Inputs[Merge Join Left Input]"
+              name="Sort Output"
+              startId="Package\Extract accm_txn_complete_time\FactSales sort.Outputs[Sort Output]" />
+            <path
+              refId="Package\Extract accm_txn_complete_time.Paths[Sort Output1]"
+              endId="Package\Extract accm_txn_complete_time\Merge Join.Inputs[Merge Join Right Input]"
+              name="Sort Output"
+              startId="Package\Extract accm_txn_complete_time\complete_time_sort.Outputs[Sort Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="235,42"
+          Id="Package\Extract accm_txn_complete_time"
+          TopLeft="223,115" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Extract accm_txn_complete_time">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="235,42"
+          Id="Package\Extract accm_txn_complete_time\Extract accm_txn_complete_time"
+          TopLeft="156,54" />
+        <NodeLayout
+          Size="159,42"
+          Id="Package\Extract accm_txn_complete_time\Extract FactSales"
+          TopLeft="558,56" />
+        <NodeLayout
+          Size="172,42"
+          Id="Package\Extract accm_txn_complete_time\complete_time_sort"
+          TopLeft="170,158" />
+        <NodeLayout
+          Size="144,42"
+          Id="Package\Extract accm_txn_complete_time\FactSales sort"
+          TopLeft="554,161" />
+        <EdgeLayout
+          Id="Package\Extract accm_txn_complete_time.Paths[Flat File Source Output]"
+          TopLeft="273.5,96">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-17.5,62"
+              Start="0,0"
+              End="-17.5,54.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,27"
+                    Point2="0,31"
+                    Point3="-4,31" />
+                  <mssgle:LineSegment
+                    End="-13.5,31" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-13.5,31"
+                    Point2="-17.5,31"
+                    Point3="-17.5,35" />
+                  <mssgle:LineSegment
+                    End="-17.5,54.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Extract accm_txn_complete_time.Paths[OLE DB Source Output]"
+          TopLeft="637.5,98">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-11.5,63"
+              Start="0,0"
+              End="-11.5,55.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,27.5"
+                    Point2="0,31.5"
+                    Point3="-4,31.5" />
+                  <mssgle:LineSegment
+                    End="-7.5,31.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-7.5,31.5"
+                    Point2="-11.5,31.5"
+                    Point3="-11.5,35.5" />
+                  <mssgle:LineSegment
+                    End="-11.5,55.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="130,42"
+          Id="Package\Extract accm_txn_complete_time\Merge Join"
+          TopLeft="367,271" />
+        <EdgeLayout
+          Id="Package\Extract accm_txn_complete_time.Paths[Sort Output]"
+          TopLeft="626,203">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-194,68"
+              Start="0,0"
+              End="-194,60.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,30"
+                    Point2="0,34"
+                    Point3="-4,34" />
+                  <mssgle:LineSegment
+                    End="-190,34" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-190,34"
+                    Point2="-194,34"
+                    Point3="-194,38" />
+                  <mssgle:LineSegment
+                    End="-194,60.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Extract accm_txn_complete_time.Paths[Sort Output1]"
+          TopLeft="256,200">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="155.666666666667,71"
+              Start="0,0"
+              End="155.666666666667,63.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.0820668693009" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,38.0820668693009"
+                    Point2="0,42.0820668693009"
+                    Point3="4,42.0820668693009" />
+                  <mssgle:LineSegment
+                    End="151.666666666667,42.0820668693009" />
+                  <mssgle:CubicBezierSegment
+                    Point1="151.666666666667,42.0820668693009"
+                    Point2="155.666666666667,42.0820668693009"
+                    Point3="155.666666666667,46.0820668693009" />
+                  <mssgle:LineSegment
+                    End="155.666666666667,63.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="214,42"
+          Id="Package\Extract accm_txn_complete_time\Calculate process time hours"
+          TopLeft="324,350" />
+        <EdgeLayout
+          Id="Package\Extract accm_txn_complete_time.Paths[Merge Join Output]"
+          TopLeft="431.5,313">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37"
+              Start="0,0"
+              End="0,29.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="261,42"
+          Id="Package\Extract accm_txn_complete_time\Load complete time updated fact sales"
+          TopLeft="355,429" />
+        <EdgeLayout
+          Id="Package\Extract accm_txn_complete_time.Paths[Derived Column Output]"
+          TopLeft="431,392">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="54.5,37"
+              Start="0,0"
+              End="54.5,29.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14.5"
+                    Point2="0,18.5"
+                    Point3="4,18.5" />
+                  <mssgle:LineSegment
+                    End="50.5,18.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="50.5,18.5"
+                    Point2="54.5,18.5"
+                    Point3="54.5,22.5" />
+                  <mssgle:LineSegment
+                    End="54.5,29.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract accm_txn_complete_time\Extract FactSales">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
