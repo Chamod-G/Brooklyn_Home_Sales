@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Brookyl_Home_Sales_Load_DW"
   DTS:PackageType="5"
-  DTS:VersionBuild="20"
-  DTS:VersionGUID="{EC4C83F7-C43C-4F7D-A4B4-EAFFB23C4AF3}">
+  DTS:VersionBuild="21"
+  DTS:VersionGUID="{BBC8990F-699F-4FB2-A8FE-4F9D0C7D2AE4}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAADylQOmkuXk6e5D725KAx9gAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADooJnbF99hTJp/7KbtSyhNRt/iiC+liM1LHzJpBk05DgAAAAAOgAAAAAIAACAAAADv6zZW5aF7vpoRs2K6m7UFXa9uZni3LcyRnhPnCQZQLiAAAACkDM63ma3qz0USTWxPbQmplwvVgFCdJT8ard99W/SncUAAAAC288ntF16znRPpG8sjc9bdoDr10GiCbJdRk+3rRd0RMk7HI29dcZJpiJi24aXhuwSi8/njVuIMhslPcT0kaahV</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAADylQOmkuXk6e5D725KAx9gAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABH2wj1JWOPVznfGhmlollZpZ6WyDwhJ4hZPfZJB+yzQAAAAAAOgAAAAAIAACAAAADf9yvqmbcDOPnL8I+dG2KHiGR2wpAalWNdmLjie/2WlyAAAABJEPyNvulcEbGVvunrgCHhaQbGc3NFiyoHvaLLjGiLCEAAAAAYXlqO890D+orLSeSAkMpfneBtcL0EPH+RFSuD3OeyGDqp6hcUZ7KSDHkbBgqBCugBGQsszNB0EESUx8ta5pGM</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -46,7 +46,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAADylQOmkuXk6e5D725KAx9gAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABLaib1OySSRTNL2s+XzZl8lqlUMpJQzj8GGpvPyeZn0QAAAAAOgAAAAAIAACAAAABgFhqo81yHKWEoVpoz4zlHvhoVENdgIHaXLv3Sd99P1CAAAAA3ZUIi3rQaDVhOk7bGI/Qmo2NaXd1Vspw7kiG8dPCLcUAAAAB8sWi8snQDXNeZr4Nf+/01Xf/u6eYQ954rAzmsjSyIadLMyJefGOY0tFarzGyEQKRKU6Fhrx6SieptCTdCWErz</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAADylQOmkuXk6e5D725KAx9gAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAaXmS6i1glfz3qCIFfgBys++1XanZmoV67DSd0ABRzWwAAAAAOgAAAAAIAACAAAAA4kgkr0q+HFEZFhVf5IXZycEb6W4TFFc52r0vJV+ItHiAAAADDB3KboH1Uir//u9TWwZGx5Vj+TBGcun/fG4WwYjwiJEAAAABuNZWZo3thZXEML2y++2JlhcK8f0IzXjJMvniiQhRvnGfj30r5tZcLpouwEUdK7ODBnCbnaROJKgkC/GbNjrMj</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -3847,7 +3847,9 @@ where [refTable].[Date] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -3881,7 +3883,9 @@ where [refTable].[Date] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -3915,7 +3919,9 @@ where [refTable].[Date] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4015,7 +4021,9 @@ where [refTable].[Date] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4049,7 +4057,9 @@ where [refTable].[Date] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4083,7 +4093,9 @@ where [refTable].[Date] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -4368,7 +4380,9 @@ where [refTable].[Date] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4402,7 +4416,9 @@ where [refTable].[Date] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
